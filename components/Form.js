@@ -5,21 +5,22 @@ import Footer from './Footer';
 
 export default function Form(props) {
     const [formData, setFormData] = useState([]);
-    
+
     function handleSubmit(event) {
         event.preventDefault();
         let formInput = {
-            loc : event.target.location.value,
-            min : event.target.minimum.value,
-            max : event.target.maximum.value,
-            avg : event.target.average.value,    
+            loc: event.target.location.value,
+            min: event.target.minimum.value,
+            max: event.target.maximum.value,
+            avg: event.target.average.value,
         }
-        setFormData([...formData,formInput]);
+        setFormData([...formData, formInput]);
         // console.log(formData)
     }
 
     return (
         <>
+
             <form className='flex flex-col w-2/3 p-10 mx-auto my-20 bg-green-300 rounded-lg' onSubmit={handleSubmit}>
                 <h1 className='flex items-center justify-center w-full text-2xl font-medium'>Create Cookie Stand</h1>
 
@@ -56,7 +57,7 @@ export default function Form(props) {
 
                 </div>
             </form >
-            <Table formData={formData} setFormData={setFormData} /> 
+            <Table formData={formData} setFormData={setFormData} />
         </>
     )
 
