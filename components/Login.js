@@ -32,7 +32,7 @@ export default function Login() {
                     />
                 </div>
                 <div className="flex flex-col items-center px-10">
-                    <button onClick={()=>login("admin","admin")} type="submit" className="w-full p-5 bg-green-600 rounded-xl">
+                    <button onClick={()=>login("root","root")} type="submit" className="w-full p-5 bg-green-600 rounded-xl">
                         SIGN IN
                     </button>
                 </div>
